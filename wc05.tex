@@ -1,0 +1,99 @@
+\documentclass[a4paper]{exam}
+
+\usepackage[a4paper]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\header{CS/MATH 113}{WC05: Deduction}{Spring 2024}
+\footer{}{Page \thepage\ of \numpages}{}
+\runningheadrule
+\runningfootrule
+
+\printanswers
+
+\newcommand\cb{\color{blue}}
+\newcommand\cre{\color{red}}
+\newcommand\cg{\color{green}}
+\newcommand\cy{\color{yellow}}
+\newcommand\cgr{\color{gray}}
+
+\title{Weekly Challenge 05: Deduction}
+\author{CS/MATH 113 Discrete Mathematics}
+\date{Spring 2024}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+  \titledquestion{Desi Einstein}
+
+  On his trip to Mississauga, Einstein felt transported to Pakistan and revised \href{https://en.wikipedia.org/wiki/Zebra_Puzzle}{his riddle}. He encountered a street with 5 houses of different colors. The inhabitant of each house hails from a different area of Karachi, has a different favorite drink, a different bad habit, and a different favorite food.
+  Specifically, Einstein observed that
+  \begin{enumerate}
+  \item\label{i1} The person from Lyari lives in the Red house.
+  \item\label{i2} The person from Gulshan likes Biryani.
+  \item\label{i3} The person from Johar prefers Chai.
+  \item\label{i4} The Green house is exactly to the left of the Gray house.
+  \item\label{i5} The owner of the Green house enjoys drinking Thanda.
+  \item\label{i6} The person who relishes Huqqa loves Haleem.
+  \item\label{i7} The owner of the Yellow house smokes Cigarettes.
+  \item\label{i8} The resident of the center house likes Coffee.
+  \item\label{i9} The person from Saddar lives in the first house.
+  \item\label{i10} The Paan chewer lives next to the one who loves Nihari.
+  \item\label{i11} The person who likes Qorma lives next to the man who smokes Cigarettes.
+  \item\label{i12} The person who takes Ghutka drinks only Water.
+  \item\label{i13} The person from Clifton smokes Bidi.
+  \item\label{i14} The person form Saddar lives next to the Blue house.
+  \item\label{i15} The Paan chewer has a neighbour who drinks Milk.
+  \end{enumerate}
+  
+  Continue the reasoning in the solution box below in order to answer the question, ``Who likes Karahi?''
+  
+  \begin{solution}
+    We can model the 5 houses as follows.
+    
+    \begin{tabular}{l||*5{c|}}
+      & \textbf{House 1} & \textbf{House 2} & \textbf{House 3} & \textbf{House 4} & \textbf{House 5} \\
+      \hline\hline
+      Color & & & & & \\\hline
+      Area & & & & & \\\hline
+      Drink & & & & & \\\hline
+      Habit & & & & & \\\hline
+      Food & & & & & \\\hline
+    \end{tabular}
+
+    From \ref{i1}, we know that the person from Saddar lives in the House 1. So, we get the following.\\
+    \begin{tabular}{l||*5{c|}}
+      & \textbf{House 1} & \textbf{House 2} & \textbf{House 3} & \textbf{House 4} & \textbf{House 5} \\
+      \hline\hline
+      Color & & & & & \\\hline
+      Area & Saddar & & & & \\\hline
+      Drink & & & & & \\\hline
+      Habit & & & & & \\\hline
+      Food & & & & & \\\hline
+    \end{tabular}
+
+    Including \ref{i14}, we know that House 2 is blue.\\
+    \begin{tabular}{l||*5{c|}}
+      & \textbf{House 1} & \textbf{\cb House 2} & \textbf{House 3} & \textbf{House 4} & \textbf{House 5} \\
+      \hline\hline
+      Color & & Blue & & & \\\hline
+      Area & Saddar & & & & \\\hline
+      Drink & & & & & \\\hline
+      Habit & & & & & \\\hline
+      Food & & & & & \\\hline
+    \end{tabular}
+  \end{solution}
+  
+\end{questions}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
